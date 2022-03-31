@@ -1,4 +1,4 @@
-package com.tekun.quizzapp.view
+package com.tekun.quizzapp.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,9 +1,8 @@
-package com.tekun.quizzapp.view
+package com.tekun.quizzapp.ui.view
 
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.media.MediaPlayer
-import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -15,8 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import com.tekun.quizzapp.R
 import com.tekun.quizzapp.databinding.FragmentQuizzBinding
-import com.tekun.quizzapp.extensions.loadByInternet
-import com.tekun.quizzapp.viewmodel.QuizViewModel
+import com.tekun.quizzapp.ui.extensions.loadByInternet
+import com.tekun.quizzapp.ui.viewmodel.QuizViewModel
 
 
 class QuizzFragment : Fragment(), View.OnClickListener {

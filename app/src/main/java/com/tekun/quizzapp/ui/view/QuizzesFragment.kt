@@ -1,4 +1,4 @@
-package com.tekun.quizzapp.view
+package com.tekun.quizzapp.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tekun.quizzapp.databinding.FragmentQuizzesBinding
-import com.tekun.quizzapp.model.QuizzesModel
-import com.tekun.quizzapp.view.adapters.MenuAdapter
+import com.tekun.quizzapp.data.model.QuizzesModel
+import com.tekun.quizzapp.ui.view.adapters.MenuAdapter
 
 /**
  * A simple [Fragment] subclass.

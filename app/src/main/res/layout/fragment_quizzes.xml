@@ -4,4 +4,4 @@
     android:id="@+id/recMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.QuizzesFragment" />
+    tools:context=".ui.view.QuizzesFragment" />

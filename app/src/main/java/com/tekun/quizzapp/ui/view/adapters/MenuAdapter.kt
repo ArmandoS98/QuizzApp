@@ -1,4 +1,4 @@
-package com.tekun.quizzapp.view.adapters
+package com.tekun.quizzapp.ui.view.adapters
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.tekun.quizzapp.R
 import com.tekun.quizzapp.databinding.ItemMenuBinding
-import com.tekun.quizzapp.model.QuizzesModel
+import com.tekun.quizzapp.data.model.QuizzesModel
 
 class MenuAdapter(val context: Context?) :
     RecyclerView.Adapter<MenuAdapter.ViewHolder>() {

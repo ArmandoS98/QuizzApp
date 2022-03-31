@@ -1,4 +1,4 @@
-package com.tekun.quizzapp.model
+package com.tekun.quizzapp.data.model
 
 data class QuizzesModel(
     val name: String,

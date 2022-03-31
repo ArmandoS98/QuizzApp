@@ -1,4 +1,4 @@
-package com.tekun.quizzapp.extensions
+package com.tekun.quizzapp.ui.extensions
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

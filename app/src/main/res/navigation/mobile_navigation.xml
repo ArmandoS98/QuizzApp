@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/nav_ranking"
-        android:name="com.tekun.quizzapp.view.RankingFragment"
+        android:name="com.tekun.quizzapp.ui.view.RankingFragment"
         android:label="Ranking"
         tools:layout="@layout/fragment_ranking" />
     <fragment
         android:id="@+id/nav_quizzes"
-        android:name="com.tekun.quizzapp.view.QuizzesFragment"
+        android:name="com.tekun.quizzapp.ui.view.QuizzesFragment"
         android:label="Quizzes"
         tools:layout="@layout/fragment_quizzes" />
     <fragment
         android:id="@+id/nav_quiz"
-        android:name="com.tekun.quizzapp.view.QuizzFragment"
+        android:name="com.tekun.quizzapp.ui.view.QuizzFragment"
         android:label="Quiz"
         tools:layout="@layout/fragment_quizz" />
 </navigation>
