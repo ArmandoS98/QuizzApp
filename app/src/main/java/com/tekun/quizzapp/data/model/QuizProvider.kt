@@ -1,7 +1,9 @@
 package com.tekun.quizzapp.data.model
 
-class QuizProvider {
-    companion object {
-        var quizzes:List<QuizModel> = emptyList()
-    }
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class QuizProvider @Inject constructor() {
+    var quizzes: List<QuizModel> = emptyList()
 }

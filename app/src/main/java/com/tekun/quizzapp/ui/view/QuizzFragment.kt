@@ -16,8 +16,9 @@ import com.tekun.quizzapp.R
 import com.tekun.quizzapp.databinding.FragmentQuizzBinding
 import com.tekun.quizzapp.ui.extensions.loadByInternet
 import com.tekun.quizzapp.ui.viewmodel.QuizViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class QuizzFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentQuizzBinding? = null
     private val binding get() = _binding!!

@@ -1,15 +1,14 @@
 package com.tekun.quizzapp.data.network
 
-import com.tekun.quizzapp.core.RetrofitHelper
 import com.tekun.quizzapp.data.model.QuizModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class QuizService {
-    private val retrofit = RetrofitHelper.getRetrofit()
+class QuizService @Inject constructor(private val api: QuizApiClient) {
     suspend fun getQuiz(): List<QuizModel> {
         return withContext(Dispatchers.IO) {
-            val response = retrofit.create(QuizApiClient::class.java).getAllQuiz()
+            val response = api.getAllQuiz()
             response.body() ?: emptyList()
         }
     }
