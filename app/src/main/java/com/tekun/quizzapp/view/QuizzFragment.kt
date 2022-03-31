@@ -2,6 +2,8 @@ package com.tekun.quizzapp.view
 
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -28,6 +30,7 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     private var question = 1
     private val limit = 10
     private var correctAnswer: Int = 0
+    var mp: MediaPlayer? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,12 +38,17 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentQuizzBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         isActive = true
+        mp = MediaPlayer.create(requireContext(), R.raw.audio)
+        mp!!.isLooping = true
+        mp!!.start()
+
         getRandomQuestion()
 
         //Opcions
@@ -49,6 +57,10 @@ class QuizzFragment : Fragment(), View.OnClickListener {
         binding.btnOpcion3.setOnClickListener(this)
         binding.btnOpcion4.setOnClickListener(this)
         binding.btnNextQuestion.setOnClickListener(this)
+
+ /*       val audio = MediaPlayer.create(requireContext(), R.raw.main_song)
+        audio.isLooping = true
+        audio.start()*/
     }
 
 
@@ -159,6 +171,7 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+        mp!!.stop()
         resetTimers()
     }
 
