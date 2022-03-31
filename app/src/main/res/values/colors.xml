@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#03A9F4</color>
+    <color name="purple_500">#2196F3</color>
+    <color name="purple_700">#1976D2</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="blue">#1402B5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="fresh_progressTint">#1976D2</color>
+    <color name="fresh_progressBackgroundTint">#9DD3FF</color>
+    <color name="medium_progressBackgroundTint">#2136F3</color>
+    <color name="medium_progressTint">#1936D2</color>
+    <color name="medium_progressBackgroundTint2">#4821F3</color>
+    <color name="medium_progressTint2">#1948D2</color>
+    <color name="critical_progressBackgroundTint">#9C21F3</color>
+    <color name="critical_progressTint">#C319E9</color>
+    <color name="critical_progressBackgroundTint2">#F3218E</color>
+    <color name="critical_progressTint2">#D2194D</color>
+</resources>
