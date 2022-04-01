@@ -3,9 +3,9 @@ package com.tekun.quizzapp.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.tekun.quizzapp.data.model.QuizModel
 import com.tekun.quizzapp.domain.GetQuizUseCase
 import com.tekun.quizzapp.domain.GetRandomQuizUseCase
+import com.tekun.quizzapp.domain.QuizItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,7 +15,7 @@ class QuizViewModel @Inject constructor(
     private val getQuizUseCase: GetQuizUseCase,
     private val getRandomQuizUseCase: GetRandomQuizUseCase
 ) : ViewModel() {
-    val quizModel = MutableLiveData<QuizModel>()
+    val quizModel = MutableLiveData<QuizItem>()
     val isLoading = MutableLiveData<Boolean>()
 
     fun onCreate() {
@@ -28,10 +28,10 @@ class QuizViewModel @Inject constructor(
     }
 
     fun randomQuestion() {
-        val quizz = getRandomQuizUseCase()
-        if (quizz != null)
-            quizModel.postValue(quizz)
+        viewModelScope.launch {
+            val quizz = getRandomQuizUseCase()
+            if (quizz != null)
+                quizModel.postValue(quizz)
+        }
     }
-
-
 }

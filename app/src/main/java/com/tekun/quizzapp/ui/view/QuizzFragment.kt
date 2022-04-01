@@ -58,9 +58,6 @@ class QuizzFragment : Fragment(), View.OnClickListener {
         binding.btnOpcion4.setOnClickListener(this)
         binding.btnNextQuestion.setOnClickListener(this)
 
- /*       val audio = MediaPlayer.create(requireContext(), R.raw.main_song)
-        audio.isLooping = true
-        audio.start()*/
     }
 
 

@@ -1,13 +1,12 @@
 package com.tekun.quizzapp.domain
 
-import com.tekun.quizzapp.data.model.QuizModel
-import com.tekun.quizzapp.data.model.QuizProvider
+import com.tekun.quizzapp.data.QuizRepository
 import javax.inject.Inject
 
-class GetRandomQuizUseCase @Inject constructor(private val quizProvider: QuizProvider) {
+class GetRandomQuizUseCase @Inject constructor(private val repository: QuizRepository) {
 
-    operator fun invoke(): QuizModel? {
-        val quizz = quizProvider.quizzes
+   suspend operator fun invoke(): QuizItem? {
+        val quizz = repository.getAllQuizzFromDatabase()
         if (!quizz.isNullOrEmpty()) {
             val randomNumber = (quizz.indices).random()
             return quizz[randomNumber]
