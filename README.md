@@ -11,7 +11,33 @@ App #3 del App Monthly Challenge 2022 de MoureDev
   <tr>
     <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204731_QuizzApp.jpg" width=270 height=510></td>
     <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204738_QuizzApp.jpg" width=270 height=510></td>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204920_QuizzApp.jpg" width=270 height=490></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204920_QuizzApp.jpg" width=270 height=510></td>
+  </tr>
+ </table>
+
+<table>
+  <tr>
+    <td>Drawer</td>
+     <td>Configurations</td>
+     <td>Playing</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204902_QuizzApp.jpg" width=270 height=510></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204907_QuizzApp.jpg" width=270 height=510></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204920_QuizzApp.jpg" width=270 height=510></td>
+  </tr>
+ </table>
+
+<table>
+  <tr>
+    <td>Good Answer</td>
+     <td>Bad Answer</td>
+     <td>Score</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-205047_QuizzApp.jpg" width=270 height=510></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-205118_QuizzApp.jpg" width=270 height=510></td>
+    <td><img src="Screenshot_20220401-205144_QuizzApp" width=270 height=510></td>
   </tr>
  </table>
 
