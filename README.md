@@ -17,19 +17,6 @@ App #3 del App Monthly Challenge 2022 de MoureDev
 
 <table>
   <tr>
-    <td>Drawer</td>
-     <td>Configurations</td>
-     <td>Playing</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204902_QuizzApp.jpg" width=270 height=510></td>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204907_QuizzApp.jpg" width=270 height=510></td>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204920_QuizzApp.jpg" width=270 height=510></td>
-  </tr>
- </table>
-
-<table>
-  <tr>
     <td>Good Answer</td>
      <td>Bad Answer</td>
      <td>Score</td>
@@ -42,6 +29,7 @@ App #3 del App Monthly Challenge 2022 de MoureDev
  </table>
 
 ## Implementaciones
+
 * Android con Kotlin
 * Dagger Hilt
 * Clean Architecture Android
@@ -75,5 +63,4 @@ App #3 del App Monthly Challenge 2022 de MoureDev
 
 ## ¿Te interesa unirte?
 
-* Ve más información en el siguiente
-  enlace [aquí](https://github.com/mouredev/Monthly-App-Challenge-2022)
+* Ve más información  [aquí](https://github.com/mouredev/Monthly-App-Challenge-2022)
