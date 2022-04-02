@@ -38,12 +38,6 @@ class QuizzesFragment : Fragment() {
                 "",
                 10,
                 "https://opentdb.com/api.php?amount=20&category=15&difficulty=easy&type=multiple"
-            ), QuizzesModel(
-                "Horizon Zero Down",
-                "",
-                "",
-                10,
-                "https://opentdb.com/api.php?amount=20&category=15&difficulty=easy&type=multiple"
             )
         )
         MenuAdapter(context).setMenu(temp)

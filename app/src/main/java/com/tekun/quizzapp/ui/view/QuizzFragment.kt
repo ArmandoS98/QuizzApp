@@ -1,21 +1,32 @@
 package com.tekun.quizzapp.ui.view
 
+import android.app.Dialog
+import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import com.tekun.quizzapp.R
+import com.tekun.quizzapp.data.sharedpreferences.PreferencesKey
+import com.tekun.quizzapp.data.sharedpreferences.PreferencesProvider
 import com.tekun.quizzapp.databinding.FragmentQuizzBinding
+import com.tekun.quizzapp.domain.RankingItem
 import com.tekun.quizzapp.ui.extensions.loadByInternet
 import com.tekun.quizzapp.ui.viewmodel.QuizViewModel
+import com.tekun.quizzapp.ui.viewmodel.RankingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +34,7 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentQuizzBinding? = null
     private val binding get() = _binding!!
     private val quizViewModel: QuizViewModel by viewModels()
+    private val rankingViewModel: RankingViewModel by viewModels()
     private var countDownTimer: CountDownTimer? = null
     private var countDownTimerNextQuestion: CountDownTimer? = null
     private var isActive = false
@@ -45,9 +57,16 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         isActive = true
-        mp = MediaPlayer.create(requireContext(), R.raw.audio)
-        mp!!.isLooping = true
-        mp!!.start()
+        val turnMusic = PreferencesProvider.bool(requireContext(), PreferencesKey.TURNSOUND)
+
+        if (turnMusic) {
+            mp = MediaPlayer.create(requireContext(), R.raw.audio)
+            mp?.isLooping = true
+            val levelMusic = PreferencesProvider.int(requireContext(), PreferencesKey.LEVEL_VOLUME)
+            val level = (levelMusic?.div(100))?.toFloat()
+            level?.let { mp?.setVolume(it, it) }
+            mp?.start()
+        }
 
         getRandomQuestion()
 
@@ -201,8 +220,17 @@ class QuizzFragment : Fragment(), View.OnClickListener {
         if (question <= limit) {
             resetButtons(ContextCompat.getColor(requireContext(), R.color.purple_500))
             quizViewModel.randomQuestion()
-        } else
-            Toast.makeText(context, "Tu puntaje es ${score}pts.", Toast.LENGTH_LONG).show()
+        } else {
+            showResult()
+        }
+    }
+
+    private fun showResult() {
+        rankingViewModel.insertWinnerModel.observe(viewLifecycleOwner) {
+            println("Result Insert: $it")
+            findNavController().popBackStack(R.id.nav_quizzes, false)
+        }
+        dialogBienvenida(requireContext())
     }
 
     private fun userSelected(answer: Int) {
@@ -248,5 +276,26 @@ class QuizzFragment : Fragment(), View.OnClickListener {
 
         options[button].setBackgroundColor(background)
         options[button].setTextColor(textColor)
+    }
+
+    private fun dialogBienvenida(context: Context) {
+        var alertDialog1: AlertDialog? = null
+        val dialogBuilder = AlertDialog.Builder(context)
+        val layoutView: View =
+            LayoutInflater.from(context).inflate(R.layout.custom_dialog_finish, null)
+        val mButtonSi = layoutView.findViewById<MaterialButton>(R.id.btnSave)
+        mButtonSi.setOnClickListener {
+            val playerName =
+                layoutView.findViewById<TextInputEditText>(R.id.tieNamePlayer).text.toString()
+            if (playerName != "") {
+                alertDialog1!!.dismiss()
+                rankingViewModel.insertWinner(RankingItem(playerName, "$score"))
+            } else
+                Toast.makeText(context, "Please enter a name", Toast.LENGTH_LONG).show()
+        }
+        dialogBuilder.setView(layoutView)
+        alertDialog1 = dialogBuilder.create()
+        alertDialog1.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog1.show()
     }
 }

@@ -18,4 +18,13 @@
     <string name="play">Play</string>
     <string name="next">Next</string>
     <string name="done_time">Done!</string>
+    <string name="highscores">Highscores</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="no_rankings_available">No Rankings Available</string>
+    <string name="msg_de_bienvenida">Hi there!\nBienvenid@ a la version\n1.0.0 de esta aplicacion\nespero no la hagas tronar\ny que te diviertas\ndescubriendola.</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="configurations">Configurations</string>
+    <string name="mute_music">Mute Music</string>
+    <string name="volume">Volume</string>
+
 </resources>

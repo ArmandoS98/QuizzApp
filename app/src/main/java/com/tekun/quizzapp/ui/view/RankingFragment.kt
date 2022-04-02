@@ -3,6 +3,8 @@ package com.tekun.quizzapp.ui.view
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -39,17 +41,14 @@ class RankingFragment : Fragment() {
         rankingViewModel.onCreate()
 
         rankingViewModel.rankingModel.observe(viewLifecycleOwner) { ranking ->
-            /*  if (ranking.isEmpty())
-                  binding.tvRanking.text = "No hay ranking disponible"
-              else
-                  binding.tvRanking.text = ranking[0].name*/
-            RankingAdapter(context).setRanking(ranking)
-
-            //Metodo el recyclerview
-            recyclerInit(ranking)
+            if (ranking.isEmpty()) {
+                binding.tvRanking.visibility = VISIBLE
+            } else {
+                binding.tvRanking.visibility = GONE
+                RankingAdapter(context).setRanking(ranking)
+                recyclerInit(ranking)
+            }
         }
-
-//        rankingViewModel.insertWinner(RankingItem("David", "100"))
     }
 
     private fun recyclerInit(temp: List<RankingItem>) {

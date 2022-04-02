@@ -4,16 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/drawable/background_question.xml" value="0.2675" />
-        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/drawable/background_round_padded.xml" value="0.271" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/drawable/background_score.xml" value="0.271" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/drawable/menu_background_color_state.xml" value="0.271" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/drawable/outline_cancel_24.xml" value="0.271" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/custom_dialog_finish.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/custom_dialog_logout.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/custom_dialog_summary.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_configurations.xml" value="0.3009833262077811" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_quiz.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_quizz.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_quizzes.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_ranking.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_quizz.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_quizzes.xml" value="0.3009833262077811" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_ranking.xml" value="0.3009833262077811" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/fragment_test.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/item_menu.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/item_ranking.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/QuizzApp/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
       </map>

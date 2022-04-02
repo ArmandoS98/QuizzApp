@@ -8,16 +8,21 @@
     <fragment
         android:id="@+id/nav_ranking"
         android:name="com.tekun.quizzapp.ui.view.RankingFragment"
-        android:label="Ranking"
+        android:label=""
         tools:layout="@layout/fragment_ranking" />
     <fragment
         android:id="@+id/nav_quizzes"
         android:name="com.tekun.quizzapp.ui.view.QuizzesFragment"
-        android:label="Quizzes"
+        android:label=""
         tools:layout="@layout/fragment_quizzes" />
     <fragment
         android:id="@+id/nav_quiz"
         android:name="com.tekun.quizzapp.ui.view.QuizzFragment"
-        android:label="Quiz"
+        android:label=""
         tools:layout="@layout/fragment_quizz" />
+    <fragment
+        android:id="@+id/nav_configuracion"
+        android:name="com.tekun.quizzapp.ui.view.ConfigurationsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_configurations" />
 </navigation>
