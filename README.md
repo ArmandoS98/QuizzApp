@@ -9,8 +9,8 @@ App #3 del App Monthly Challenge 2022 de MoureDev
      <td>Playing</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204731_QuizzApp.jpg" width=270 height=490></td>
-    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204738_QuizzApp.jpg" width=270 height=490></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204731_QuizzApp.jpg" width=270 height=510></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204738_QuizzApp.jpg" width=270 height=510></td>
     <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-204920_QuizzApp.jpg" width=270 height=490></td>
   </tr>
  </table>
