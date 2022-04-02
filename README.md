@@ -37,7 +37,7 @@ App #3 del App Monthly Challenge 2022 de MoureDev
   <tr>
     <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-205047_QuizzApp.jpg" width=270 height=510></td>
     <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-205118_QuizzApp.jpg" width=270 height=510></td>
-    <td><img src="Screenshot_20220401-205144_QuizzApp" width=270 height=510></td>
+    <td><img src="https://github.com/ArmandoS98/QuizzApp/blob/master/Screenshots/Screenshot_20220401-205144_QuizzApp.jpg" width=270 height=510></td>
   </tr>
  </table>
 
