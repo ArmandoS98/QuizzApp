@@ -14,7 +14,7 @@ data class RankingEntity(
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name = "ranking")
-    val ranking: String
+    val ranking: Int
 )
 
-fun RankingItem.toDatabase() = RankingEntity(name = name, ranking = ranking)
+fun RankingItem.toDatabase() = RankingEntity(id = id, name = name, ranking = ranking)

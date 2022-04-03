@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuizzApp</string>
+    <string name="app_name">QuizApp</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -26,5 +26,10 @@
     <string name="configurations">Configurations</string>
     <string name="mute_music">Mute Music</string>
     <string name="volume">Volume</string>
+    <string name="about">About</string>
+    <string name="application_developed_by_armandos98_for_the_monthly_challenge_organized_by_mouredev_corresponding_to_the_month_of_march_2022">Application developed by @ArmandoS98 for the monthly challenge organized by @Mouredev, corresponding to the month of March 2022.</string>
+    <string name="talk_is_cheap_show_me_the_code">\'Talk is cheap. Show me the code!\'</string>
+    <string name="github">github</string>
+    <string name="linkedin">linkedin</string>
 
 </resources>

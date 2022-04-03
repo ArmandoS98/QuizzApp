@@ -1,5 +1,7 @@
 package com.tekun.quizzapp.ui.extensions
 
+import android.app.Activity
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.bumptech.glide.Glide
@@ -24,6 +26,14 @@ fun ImageView.loadByInternet(resource: String): ViewTarget<ImageView, Drawable> 
         .diskCacheStrategy(DiskCacheStrategy.ALL)
         .into(this)
 }
+
+inline fun <reified T : Activity> Activity.goToActivity(noinline init: Intent.() -> Unit = {}) {
+    val intent = Intent(this, T::class.java)
+    intent.init()
+    startActivity(intent)
+    finish()
+}
+
 
 
 

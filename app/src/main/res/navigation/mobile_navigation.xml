@@ -14,15 +14,28 @@
         android:id="@+id/nav_quizzes"
         android:name="com.tekun.quizzapp.ui.view.QuizzesFragment"
         android:label=""
-        tools:layout="@layout/fragment_quizzes" />
+        tools:layout="@layout/fragment_quizzes">
+        <action
+            android:id="@+id/action_nav_quizzes_to_nav_quiz"
+            app:destination="@id/nav_quiz" />
+    </fragment>
     <fragment
         android:id="@+id/nav_quiz"
         android:name="com.tekun.quizzapp.ui.view.QuizzFragment"
         android:label=""
-        tools:layout="@layout/fragment_quizz" />
+        tools:layout="@layout/fragment_quizz">
+        <action
+            android:id="@+id/action_nav_quiz_to_nav_quizzes"
+            app:destination="@id/nav_quizzes" />
+    </fragment>
     <fragment
         android:id="@+id/nav_configuracion"
         android:name="com.tekun.quizzapp.ui.view.ConfigurationsFragment"
         android:label=""
         tools:layout="@layout/fragment_configurations" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.tekun.quizzapp.ui.view.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
 </navigation>

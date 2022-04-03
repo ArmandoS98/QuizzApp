@@ -7,6 +7,7 @@ import android.preference.PreferenceManager
 enum class PreferencesKey(val value: String) {
     TURNSOUND("turn_sound"),
     LEVEL_VOLUME("level_volume"),
+    LAST_WINNER("last_winner"),
     FIRST_TIME("com.aesc.proyectofinaldesarrollomovil")
 }
 
@@ -22,6 +23,9 @@ object PreferencesProvider {
 
     fun int(context: Context, key: PreferencesKey): Int? {
         return prefs(context).getInt(key.value, 50)
+    }
+    fun intWinner(context: Context, key: PreferencesKey): Int? {
+        return prefs(context).getInt(key.value, 0)
     }
 
     fun set(context: Context, key: PreferencesKey, value: Boolean) {

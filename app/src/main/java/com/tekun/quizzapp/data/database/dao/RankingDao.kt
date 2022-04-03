@@ -8,7 +8,7 @@ import com.tekun.quizzapp.data.database.entities.RankingEntity
 
 @Dao
 interface RankingDao {
-    @Query("SELECT * FROM ranking_table")
+    @Query("SELECT * FROM ranking_table ORDER BY ranking DESC")
     suspend fun getRanking(): List<RankingEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

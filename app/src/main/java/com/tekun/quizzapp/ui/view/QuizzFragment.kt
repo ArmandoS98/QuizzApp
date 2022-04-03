@@ -1,6 +1,5 @@
 package com.tekun.quizzapp.ui.view
 
-import android.app.Dialog
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -11,6 +10,7 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
@@ -228,6 +228,7 @@ class QuizzFragment : Fragment(), View.OnClickListener {
     private fun showResult() {
         rankingViewModel.insertWinnerModel.observe(viewLifecycleOwner) {
             println("Result Insert: $it")
+
             findNavController().popBackStack(R.id.nav_quizzes, false)
         }
         dialogBienvenida(requireContext())
@@ -251,7 +252,6 @@ class QuizzFragment : Fragment(), View.OnClickListener {
             if (answer != -1) {
                 updateButtons(answer - 1, Color.RED, Color.WHITE)
             }
-
 
         //Redireccionando a la siguiente pregunta
         countDownTimerNextQuestion = object : CountDownTimer(2000, 1000) {
@@ -284,12 +284,24 @@ class QuizzFragment : Fragment(), View.OnClickListener {
         val layoutView: View =
             LayoutInflater.from(context).inflate(R.layout.custom_dialog_finish, null)
         val mButtonSi = layoutView.findViewById<MaterialButton>(R.id.btnSave)
+        val scoreText = layoutView.findViewById<TextView>(R.id.tvScore)
+        scoreText.text = "Score: $score"
         mButtonSi.setOnClickListener {
             val playerName =
                 layoutView.findViewById<TextInputEditText>(R.id.tieNamePlayer).text.toString()
             if (playerName != "") {
                 alertDialog1!!.dismiss()
-                rankingViewModel.insertWinner(RankingItem(playerName, "$score"))
+                //last winner
+                var lastWinner = PreferencesProvider.intWinner(
+                    requireContext(),
+                    PreferencesKey.LAST_WINNER
+                )
+
+                lastWinner = if (lastWinner == 9) 0 else (lastWinner!! + 1)
+
+                //Saving the new id
+                PreferencesProvider.set(requireContext(), PreferencesKey.LAST_WINNER, lastWinner)
+                rankingViewModel.insertWinner(RankingItem(lastWinner, playerName, score))
             } else
                 Toast.makeText(context, "Please enter a name", Toast.LENGTH_LONG).show()
         }

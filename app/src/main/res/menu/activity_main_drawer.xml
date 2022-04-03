@@ -16,5 +16,11 @@
             android:id="@+id/nav_configuracion"
             android:icon="@drawable/ic_baseline_settings_24"
             android:title="@string/configurations" />
+
+        <item
+            
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_24"
+            android:title="@string/about" />
     </group>
 </menu>

@@ -26,8 +26,9 @@ class RankingAdapter(val context: Context?) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.binding.tvRankingId.text = (position + 1).toString()
         holder.binding.tvName.text = rankingList[position].name
-        holder.binding.tvScore.text = rankingList[position].ranking
+        holder.binding.tvScore.text = "${rankingList[position].ranking}pts"
     }
 
     override fun getItemCount() = rankingList.size
