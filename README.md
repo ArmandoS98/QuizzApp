@@ -37,6 +37,9 @@ App #3 del App Monthly Challenge 2022 de MoureDev
 * Retrofit2
 * Room
 
+## Prueba el app!
+Descargala de [aquí](https://github.com/ArmandoS98/QuizzApp/blob/master/app/release/QuizApp_Techun.apk)
+
 ### Requisitos:
 
 * El diseño es de libre elección.
