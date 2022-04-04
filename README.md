@@ -38,7 +38,7 @@ App #3 del App Monthly Challenge 2022 de MoureDev
 * Room
 
 ## Prueba el app!
-Descargala de [aquí](https://github.com/ArmandoS98/QuizzApp/blob/master/app/release/QuizApp_Techun.apk)
+Descargala de [aquí](https://github.com/ArmandoS98/QuizzApp/raw/master/app/release/QuizApp_Techun.apk)
 
 ### Requisitos:
 
